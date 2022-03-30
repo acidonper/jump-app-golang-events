@@ -19,7 +19,7 @@ export KAFKA_HOST=a50e9747c108647d6aa9095ddd503628-1581487172.us-east-2.elb.amaz
 export KAFKA_TOPIC=my-topic
 ```
 
-NOTE: Please visit the following [link](.kafka) for more information about Kafka
+NOTE: Please visit the following [link](./kafka) for more information about Kafka
 
 ## Quick Start Jump App Golang Backend (*Events*)
 
