@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back-golang-event
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: back-golang-event
+  template:
+    metadata:
+      labels:
+        name: back-golang-event
+        app: back-golang-event
+        version: v1
+    spec:
+      containers:
+      - image: quay.io/acidonpe/jump-app-back-golang-event:latest
+        imagePullPolicy: Always
+        name: back-golang-event
+        resources: {}
+        env:  
+          - name: KAFKA_HOST
+            value: a50e9747c108647d6aa9095ddd503628-1581487172.us-east-2.elb.amazonaws.com:9092
+          - name: KAFKA_TOPIC
+            value: my-topic
